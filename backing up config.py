@@ -1,7 +1,7 @@
 import getpass
 import telnetlib  # importing the telnet library
 
-user = input("Enter your remote telnet username: ")
+user = input("Please Enter your remote telnet username: ")
 password = getpass.getpass()  # requesting for a password
 
 f = open('myswitches') #opens a folder named myswitches from d NETAUTO container n assigning it 2 varaible f
