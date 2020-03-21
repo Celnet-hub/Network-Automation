@@ -15,6 +15,9 @@ if password == 'cisco':
        exit()
 elif password != 'cisco':
    print('Please input correct password....')
+   password = getpass.getpass()  # requesting for a password
+   if password != 'cisco':
+      print('Limit reached... ')
    exit()
 
 
