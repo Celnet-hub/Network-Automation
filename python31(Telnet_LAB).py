@@ -11,7 +11,7 @@ if password == 'cisco':
    try:
        Tel = telnetlib.Telnet(HOST)  # telneting to the switch
    except:
-       print('Unable to establish remote connection... transport input maybe set to none')
+       print('Unable to establish remote connection... transport input maybe set to none....')
        exit()
 elif password != 'cisco':
    print('Please input correct password....')
