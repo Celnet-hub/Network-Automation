@@ -3,9 +3,14 @@ import telnetlib    #importing the telnet library
 
 HOST = "192.168.122.254" 
 user = input("Enter your remote telnet username: ")
-password = getpass.getpass()  #requesting for a password 
 
-Tel = telnetlib.Telnet(HOST)  #telneting to the switch
+password = getpass.getpass()  # requesting for a password
+
+if password == 'cisco':
+   print('Connecting to ' + HOST)
+   Tel = telnetlib.Telnet(HOST)  # telneting to the switch
+elif password != 'cisco':
+   print('Please input correct password....')
 
 Tel.read_until(b"Username: ")  #runs the code until Username is displayed 
 Tel.write(user.encode('ascii') + b"\n") #write the user.variable to the network device
